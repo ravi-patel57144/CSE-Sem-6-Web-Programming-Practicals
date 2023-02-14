@@ -1,0 +1,194 @@
+<html>
+  <head><title>Practical 4.3</title>
+    <style>
+        body {
+        padding-top: 50px;
+      }
+
+      .form-container {
+        width: 80%;
+        margin: 0 auto;
+        padding: 10px;
+        border: 1px solid #ccc;
+        border-radius: 20px;
+      }
+
+      h1,h3 {
+        text-align: center;
+      }
+
+      h5 {
+        color: red;
+      }
+
+      label {
+        font-weight: bold;
+        margin-top: 10px;
+        display: block;
+      }
+
+      input[type="text"],
+      input[type="email"],
+      input[type="file"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="radio"] {
+        width: 5%;
+        padding: 10px;
+        margin-top: 10px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+      }
+
+      input[type="submit"] {
+        width: 100%;
+        padding: 10px;
+        margin-top: 20px;
+        border-radius: 20px;
+        border: #020202 solid;
+        background-color: #658e66;
+        color: white;
+        cursor: pointer;
+      }
+
+      /* Style for the preview container */
+      .preview-container {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+        width: 100%;
+        text-align: center;
+      }
+
+      /* Style for the preview image */
+      .preview-image {
+        width: 150px;
+        height: 180px;
+        object-fit: cover;
+        border: 1px solid #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="form-container">
+      <h1><u>ABC Bank</u></h1>
+      <h3>Account opening form for Resident Individuals</h3>
+      <form>
+        <h5>TO BE FILLED IN CAPITAL LETTERS</h5>
+        <label style="color: #610edd;">1. Account Type:-</label>
+        <input type="radio" name="actype" value="saving">Saving Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="current">Current Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="term">Term Deposit Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="other">Other &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        
+        <label style="color: #610edd;">2. List of Applicants:-</label>
+        <label>Primary Applicant</label>
+        <input type="text" name="name" placeholder="Enter Full Name">
+
+        <label>Joint Applicant 1</label>
+        <input type="text" name="name" placeholder="Enter Full Name">
+
+        <label>Joint Applicant 2</label>
+        <input type="text" name="name" placeholder="Enter Full Name">
+
+        <label style="color: #610edd;">3. Communication Address:-</label>
+
+        <label>Full Address</label>
+        <input type="text" name="address" placeholder="Enter full address with Pincode">
+
+        <label>Email</label>
+        <input type="email" name="email" placeholder="Enter your email address">
+
+        <label>Phone Number</label>
+        <input type="text" name="phone" placeholder="Enter you mobile number">
+
+
+        <label style="color: #610edd;">4. Declaration/Undertaking:-</label>
+        <p>I hereby declare that above information are valid and true.</p>
+        <label for="picture1">Primary Applicant Photo</label>
+        <input type="file" id="picture1">
+        <label for="picture2">Joint Applicant 1 Photo</label>
+        <input type="file" id="picture2">
+        <label for="picture3">Joint Applicant 2 Photo</label>
+        <input type="file" id="picture3">
+        <div class="preview-container">
+          <img class="preview-image" id="preview1" src="#" alt="Primary Applicant">
+          <img class="preview-image" id="preview2" src="#" alt="Joint Applicant 1">
+          <img class="preview-image" id="preview3" src="#" alt="Joint Applicant 2">
+        </div>
+
+        <input type="submit" value="Open Account">
+      </form>
+    </div>
+
+
+
+    <script>
+      // Function to preview the uploaded picture1
+      const fileInput1 = document.querySelector("#picture1");
+      const preview1 = document.querySelector("#preview1");
+    
+      fileInput1.addEventListener("change", function () {
+        const file = this.files[0];
+    
+        if (file) {
+          const reader = new FileReader();
+    
+          reader.addEventListener("load", function () {
+            preview1.src = reader.result;
+          });
+    
+          reader.readAsDataURL(file);
+        } else {
+          preview1.src = "#";
+        }
+      });
+      
+      // Function to preview the uploaded picture2
+      const fileInput2 = document.querySelector("#picture2");
+      const preview2 = document.querySelector("#preview2");
+    
+      fileInput2.addEventListener("change", function () {
+        const file = this.files[0];
+    
+        if (file) {
+          const reader = new FileReader();
+    
+          reader.addEventListener("load", function () {
+            preview2.src = reader.result;
+          });
+    
+          reader.readAsDataURL(file);
+        } else {
+          preview2.src = "#";
+        }
+      });
+      
+      // Function to preview the uploaded picture3
+      const fileInput3 = document.querySelector("#picture3");
+      const preview3 = document.querySelector("#preview3");
+    
+      fileInput3.addEventListener("change", function () {
+        const file = this.files[0];
+    
+        if (file) {
+          const reader = new FileReader();
+    
+          reader.addEventListener("load", function () {
+            preview3.src = reader.result;
+          });
+    
+          reader.readAsDataURL(file);
+        } else {
+          preview3.src = "#";
+        }
+      });
+    </script> 
+    
+  </body>
+</html>

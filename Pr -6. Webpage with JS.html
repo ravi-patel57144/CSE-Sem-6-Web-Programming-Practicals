@@ -1,0 +1,76 @@
+<html>
+  <head>
+    <title>Practical 6</title>
+    <script>
+      function showMessage() {
+        alert("You Clicked Me");
+      }
+
+      function checkOddEven() {
+        var number = document.getElementById("number").value;
+        if (number % 2 === 0) {
+          alert("The number is even");
+        } else {
+          alert("The number is odd");
+        }
+      }
+
+      function performOperation() {
+        var num1 = parseFloat(document.getElementById("num1").value);
+        var num2 = parseFloat(document.getElementById("num2").value);
+        var operation = document.querySelector('input[name="operation"]:checked').value;
+        var result;
+
+        switch (operation) {
+          case "add":
+            result = num1 + num2;
+            break;
+          case "subtract":
+            result = num1 - num2;
+            break;
+          case "multiply":
+            result = num1 * num2;
+            break;
+          case "divide":
+            result = num1 / num2;
+            break;
+        }
+
+        alert("The result is " + result);
+      }
+    </script>
+
+    <style>
+        body {
+        padding-top: 50px;
+        padding-left: 40%;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Webpage with JS</h1>
+
+    <h3>"You clicked me" Message</h3>
+    <button onclick="showMessage()">Click Me</button><br><br>
+
+    <h3>Check Even/Odd</h3>
+    <label for="number">Enter a number:</label>
+    <input type="number" id="number" name="number">
+    <button onclick="checkOddEven()">Check Odd/Even</button><br><br>
+
+    <h3>Arithmetic Operatios</h3>
+    <label for="num1">Enter the first number:</label>
+    <input type="number" id="num1" name="num1"><br><br>
+    <label for="num2">Enter the second number:</label>
+    <input type="number" id="num2" name="num2"><br><br>
+    <input type="radio" id="add" name="operation" value="add">
+    <label for="add">Add</label><br>
+    <input type="radio" id="subtract" name="operation" value="subtract">
+    <label for="subtract">Subtract</label><br>
+    <input type="radio" id="multiply" name="operation" value="multiply">
+    <label for="multiply">Multiply</label><br>
+    <input type="radio" id="divide" name="operation" value="divide">
+    <label for="divide">Divide</label><br><br>
+    <button onclick="performOperation()">Perform Operation</button>
+  </body>
+</html>

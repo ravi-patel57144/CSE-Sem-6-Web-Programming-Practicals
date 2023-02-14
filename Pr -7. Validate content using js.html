@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+  <head><title>Practical 7</title>
+    <script>
+      function validateForm() {
+        var name = document.forms["myForm"]["name"].value;
+        var mobile = document.forms["myForm"]["mobile"].value;
+        var email = document.forms["myForm"]["email"].value;
+        var gender = document.forms["myForm"]["gender"].value;
+        var letters = /^[A-Za-z]+$/;
+        var numbers = /^[0-9]+$/;
+        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+
+        if (!name.match(letters)) {
+          alert("Name must have alphabet characters only");
+          return false;
+        }
+
+        if (!mobile.match(numbers) || mobile.length != 10) {
+          alert("Mobile number must have exact 10 digits");
+          return false;
+        }
+
+        if (!email.match(mailformat)) {
+          alert("Please enter a valid email address");
+          return false;
+        }
+
+        if (gender == "") {
+          alert("Please select your gender");
+          return false;
+        }
+      }
+    </script>
+
+<style>
+    body {
+    padding-top: 50px;
+    padding-left: 40%;
+  }
+</style>
+  </head>
+  <body>
+    <h2>Registration Form</h2>
+    <form name="myForm" onsubmit="return validateForm()">
+      <p>
+        <label for="name">Name:</label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          onmouseover="this.title='Enter your name'"
+        />
+      </p>
+      <p>
+        <label for="mobile">Mobile:</label>
+        <input
+          type="text"
+          id="mobile"
+          name="mobile"
+          onmouseover="this.title='Enter your mobile number'"
+        />
+      </p>
+      <p>
+        <label for="email">Email:</label>
+        <input
+          type="text"
+          id="email"
+          name="email"
+          onmouseover="this.title='Enter your email address'"
+        />
+      </p>
+      <p>
+        <label for="gender">Gender:</label>
+        <input type="radio" id="gender" name="gender" value="male" />Male
+        <input type="radio" id="gender" name="gender" value="female" />Female
+      </p>
+      <input type="submit" value="Submit">
+    </form>
+  </body>
+</html>

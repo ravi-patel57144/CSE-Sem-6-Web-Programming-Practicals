@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <title>Practical 3</title>
+        <style>
+            body {
+              padding-top: 20px;
+            }
+            h1 {
+              display: flex;
+              justify-content: center;
+            }
+            table, th, td {
+                border: 1px solid black;
+                border-collapse: collapse;
+                text-align: center;
+            }
+            table.center {
+                margin-left: auto; 
+                margin-right: auto;
+            }
+            table{
+                width: 70%;
+            }
+        </style>
+  </head>
+  <body>
+    <h1>Table with required tags & attributes</h1>
+    <table class="center">
+      <tr>
+        <td rowspan="2">A</td>
+        <td>B</td>
+        <td rowspan="3">D</td>
+        <td colspan="3">E</td>
+        <td>F</td>
+      </tr>
+      <tr>
+        <td>C</td>
+        <td rowspan="2">G</td>
+        <td rowspan="2">H</td>
+        <td rowspan="2" colspan="4">I</td>
+      </tr>
+      <tr>
+        <td colspan="2">J</td>
+      </tr>
+      <tr>
+        <td colspan="7">N</td>
+      </tr>
+      <tr>
+        <td colspan="3">K</td>
+        <td>L</td>
+        <td colspan="3">M</td>
+      </tr>
+    </table>
+  </body>
+</html>
