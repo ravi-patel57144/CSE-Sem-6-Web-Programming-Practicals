@@ -78,23 +78,23 @@
     <div class="form-container">
       <h1><u>ABC Bank</u></h1>
       <h3>Account opening form for Resident Individuals</h3>
-      <form>
+      <form action="Pr -8.3 connect.php" method="POST">
         <h5>TO BE FILLED IN CAPITAL LETTERS</h5>
         <label style="color: #610edd;">1. Account Type:-</label>
-        <input type="radio" name="actype" value="saving">Saving Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="actype" value="current">Current Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="actype" value="term">Term Deposit Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <input type="radio" name="actype" value="other">Other &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="Saving">Saving Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="Current">Current Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="Term">Term Deposit Account &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type="radio" name="actype" value="Other">Other &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
         
         <label style="color: #610edd;">2. List of Applicants:-</label>
         <label>Primary Applicant</label>
-        <input type="text" name="name" placeholder="Enter Full Name">
+        <input type="text" name="p_name" placeholder="Enter Full Name">
 
         <label>Joint Applicant 1</label>
-        <input type="text" name="name" placeholder="Enter Full Name">
+        <input type="text" name="j1_name" placeholder="Enter Full Name">
 
         <label>Joint Applicant 2</label>
-        <input type="text" name="name" placeholder="Enter Full Name">
+        <input type="text" name="j2_name" placeholder="Enter Full Name">
 
         <label style="color: #610edd;">3. Communication Address:-</label>
 
@@ -111,18 +111,19 @@
         <label style="color: #610edd;">4. Declaration/Undertaking:-</label>
         <p>I hereby declare that above information are valid and true.</p>
         <label for="picture1">Primary Applicant Photo</label>
-        <input type="file" id="picture1">
+        <input type="file" name="picture1" id="picture1">
         <label for="picture2">Joint Applicant 1 Photo</label>
-        <input type="file" id="picture2">
+        <input type="file" name="picture2" id="picture2">
         <label for="picture3">Joint Applicant 2 Photo</label>
-        <input type="file" id="picture3">
+        <input type="file" name="picture3" id="picture3">
         <div class="preview-container">
           <img class="preview-image" id="preview1" src="#" alt="Primary Applicant">
           <img class="preview-image" id="preview2" src="#" alt="Joint Applicant 1">
           <img class="preview-image" id="preview3" src="#" alt="Joint Applicant 2">
         </div>
 
-        <input type="submit" value="Open Account">
+        <input type="submit" name="submit" value="Open Account">
+        <a href="Pr -8.3 Account Details.php">Opened Account Details</a>
       </form>
     </div>
 
