@@ -93,6 +93,6 @@ if (mysqli_num_rows($result) > 0) {
 mysqli_close($conn);
 ?>
 </table>
-<a href="Pr -4.2 College addmission form.html">New Addmission? <br> Click here to Take Addmission</a>
+<a href="Pr -8.2 College addmission form.html">New Addmission? <br> Click here to Take Addmission</a>
 </div>
 
