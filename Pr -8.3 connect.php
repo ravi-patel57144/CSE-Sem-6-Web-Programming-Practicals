@@ -20,9 +20,9 @@ if (isset($_POST['submit'])) {
     $address = mysqli_real_escape_string($conn, $_POST['address']);
     $email = mysqli_real_escape_string($conn, $_POST['email']);
     $phone = mysqli_real_escape_string($conn, $_POST['phone']);
-    $picture1 = mysqli_real_escape_string($conn, $_POST['picture1']);
-    $picture2 = mysqli_real_escape_string($conn, $_POST['picture2']);
-    $picture3 = mysqli_real_escape_string($conn, $_POST['picture3']);
+    $picture1 = file_get_contents($_FILES['picture1']['tmp_name']);
+    $picture2 = file_get_contents($_FILES['picture2']['tmp_name']);
+    $picture3 = file_get_contents($_FILES['picture3']['tmp_name']);
 }
 
 //Validate the form data

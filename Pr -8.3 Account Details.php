@@ -85,13 +85,11 @@ if (mysqli_num_rows($result) > 0) {
     echo "<td>" . $row["address"] . "</td>";
     echo "<td>" . $row["email"] . "</td>";
     echo "<td>" . $row["phone"] . "</td>";
-    echo "<td>" . $row["picture1"] . "</td>";
+    echo "<td><img src='data:image/jpg;base64," . base64_encode($row['picture1']) . "'></td>";
     echo "<td>" . $row["picture2"] . "</td>";
     echo "<td>" . $row["picture3"] . "</td>";
     echo "</tr>";
   }
-} else {
-  echo "No Accounts Opened";
 }
 
 mysqli_close($conn);
