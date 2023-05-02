@@ -9,7 +9,8 @@
         var gender = document.forms["myForm"]["gender"].value;
         var letters = /^[A-Za-z]+$/;
         var numbers = /^[0-9]+$/;
-        var mailformat = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+        var mailformat = /^[A-Za-z0-9_!#$%&'*+\/=?`{|}~^.-]+@[A-Za-z0-9.-]+$/;
+        
 
         if (!name.match(letters)) {
           alert("Name must have alphabet characters only");
@@ -48,9 +49,7 @@
         <input
           type="text"
           id="name"
-          name="name"
-          onmouseover="this.title='Enter your name'"
-        />
+          onmouseover="this.title='Enter your name'"/>
       </p>
       <p>
         <label for="mobile">Mobile:</label>
@@ -58,8 +57,7 @@
           type="text"
           id="mobile"
           name="mobile"
-          onmouseover="this.title='Enter your mobile number'"
-        />
+          onmouseover="this.title='Enter your mobile number'"/>
       </p>
       <p>
         <label for="email">Email:</label>
@@ -67,8 +65,7 @@
           type="text"
           id="email"
           name="email"
-          onmouseover="this.title='Enter your email address'"
-        />
+          onmouseover="this.title='Enter your email address'"/>
       </p>
       <p>
         <label for="gender">Gender:</label>
