@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Key Events</title>
+	<style>
+		body {
+			background-color: #fff;
+			color: #000;
+			font-family: Arial, sans-serif;
+			font-size: 16px;
+			text-align: center;
+			margin: 0;
+			padding: 0;
+		}
+	</style>
+</head>
+<body>
+	<h1>Press a Key</h1>
+	<p id="keycode"></p>
+	<p id="message"></p>
+	<script>
+            var keycode = document.getElementById("keycode");
+            var message = document.getElementById("message");
+
+            document.addEventListener("keydown", function(event) {
+            // Display the key code for the key pressed
+            keycode.innerHTML = "Key code: " + event.keyCode;
+            
+            // Display a message that a vowel is pressed if vowel keys are pressed
+            var vowels = ['a', 'e', 'i', 'o', 'u'];
+            if (vowels.includes(event.key)) {
+                message.innerHTML = "A vowel is pressed";
+            } else {
+                message.innerHTML = "";
+            }
+            });
+
+            document.addEventListener("keyup", function(event) {
+            // Change the background color to red after releasing the pressed key
+            document.body.style.backgroundColor = "red";
+            });
+    </script>
+</body>
+</html>

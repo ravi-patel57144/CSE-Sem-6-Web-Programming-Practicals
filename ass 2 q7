@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Student Information Form</title>
+</head>
+<body>
+	<h1>Student Information Form</h1>
+	<form action="ass 2 q7 insert.php" method="post">
+		<label>Enrollment No:</label>
+		<input type="text" name="enrollment_no" required><br><br>
+		<label>Name:</label>
+		<input type="text" name="name" required><br><br>
+		<label>Semester:</label>
+		<input type="text" name="semester" required><br><br>
+		<label>Gender:</label>
+		<input type="radio" name="gender" value="Male" required>Male
+		<input type="radio" name="gender" value="Female" required>Female<br><br>
+		<label>Qualification:</label>
+		<input type="text" name="qualification" required><br><br>
+		<button type="submit">Submit</button><br>
+        <button type="submit"><a href="ass 2 update.php">Update</a></button><br>
+        <button type="submit"><a href="ass 2 delete.php">Delete</a></button><br>
+        <button type="submit"><a href="ass 2 display.php">Display</a></button>
+	</form>
+</body>
+</html>
