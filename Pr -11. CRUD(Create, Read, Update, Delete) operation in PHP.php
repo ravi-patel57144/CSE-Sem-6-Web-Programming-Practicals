@@ -18,7 +18,6 @@
         input[type="email"],
         input[type="tel"] {
           padding: 10px;
-          border: none;
           border-radius: 5px;
           margin-bottom: 20px;
           font-size: 16px;
@@ -29,7 +28,6 @@
           background-color: #4CAF50;
           color: white;
           padding: 10px 20px;
-          border: none;
           border-radius: 5px;
           font-size: 16px;
           cursor: pointer;
